@@ -27,8 +27,8 @@ public class ExceptionHandlerServlet extends HttpServlet {
         System.out.println("message = " + message);
         System.out.println("statusCode = " + statusCode);
 
-
-        StringBuilder errorPage = new  StringBuilder();
+        /* 설명. 위의 재료를 가지고 만드는 동적인 에러 페이지 생성 및 응답 */
+        StringBuilder errorPage = new StringBuilder();
         errorPage.append("<h1>")
                 .append(statusCode)
                 .append(" - ")
