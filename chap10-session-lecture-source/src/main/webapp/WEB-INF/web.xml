@@ -3,4 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+    <session-config>
+        <!-- 세션 유지 시간 (분 단위) -->
+        <session-timeout>30</session-timeout>
+    </session-config>
 </web-app>
