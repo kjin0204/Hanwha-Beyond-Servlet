@@ -34,7 +34,7 @@ public class ContextListener implements ServletContextListener, ServletContextAt
 
     @Override
     public void attributeReplaced(ServletContextAttributeEvent event) {
-        System.out.println("attribute replaced!");
+        System.out.println("attribute replaced! 수전 전 값: " + event.getValue() + " , 수정 후 값 : " + event.getServletContext().getAttribute(event.getName()));
     }
 
 }
