@@ -1,7 +1,13 @@
 package org.example.listener.section02;
 
-public class UserDTO {
+import jakarta.servlet.http.HttpSessionBindingEvent;
+import jakarta.servlet.http.HttpSessionBindingListener;
+
+import java.io.Serializable;
+
+public class UserDTO implements HttpSessionBindingListener{
     private String name;
+
     private int age;
 
     public UserDTO() {
@@ -34,5 +40,17 @@ public class UserDTO {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+
+    /* 설명. HttpSessionBindingListener는 각 class마다 별도로 작성 */
+    @Override
+    public void valueBound(HttpSessionBindingEvent event) {
+        System.out.println("UserDTO 객체가 session에 담김");
+    }
+
+    @Override
+    public void valueUnbound(HttpSessionBindingEvent event) {
+        System.out.println("UserDTO가 객체가 session에서 제거됨");
     }
 }
